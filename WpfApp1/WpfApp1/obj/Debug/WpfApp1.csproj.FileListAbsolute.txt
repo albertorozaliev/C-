@@ -1,0 +1,15 @@
+C:\пары\C#\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\пары\C#\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\пары\C#\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\пары\C#\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb

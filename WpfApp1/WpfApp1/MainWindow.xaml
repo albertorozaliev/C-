@@ -1,0 +1,85 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="62.006"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"></ColumnDefinition>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="ExpressionTextBlock" Grid.Row="0" Grid.ColumnSpan="6" FontSize="16" 
+           VerticalAlignment="Center" HorizontalAlignment="Right" 
+           Margin="10" Text=""/>
+        <TextBlock Name="ResultTextBlock" Grid.Row="1" Grid.ColumnSpan="6" FontSize="24" FontWeight="Bold"
+           VerticalAlignment="Center" HorizontalAlignment="Right" 
+           Margin="10,10,10,10" Text="0"/>
+        <Button Grid.Column="0" Grid.Row="2" Name="Btn1" Content="sin" Click="FunctionButton_Click" Grid.ColumnSpan="2"  />
+        <Button Grid.Column="2" Grid.Row="2" Name="Btn2" Content="PI" Click="FunctionButton_Click" />
+        <Button Grid.Column="3" Grid.Row="2" Name="Btn3" Content="e" Click="FunctionButton_Click" />
+        <Button Grid.Column="4" Grid.Row="2" Name="Btn4" Content="CE" Click="FunctionButton_Click" />
+        <Button Grid.Column="5" Grid.Row="2" Name="Btn6" Content="Exit" Click="FunctionButton_Click" />
+        <Button Grid.Column="0" Grid.Row="2" Name="Btn7" Content="x^2" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Click="FunctionButton_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.443"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.781"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" Name="Btn8" Content="1/X" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="3" Grid.Row="2" Name="Btn9" Content="|x|" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="4" Grid.Row="2" Name="Btn10" Content="cos" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="5" Grid.Row="2" Name="Btn12" Content="tg" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="0" Grid.Row="3" Name="Btn13" Content="sqrt^2" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="2" Grid.Row="3" Name="Btn14" Content="(" Margin="0,62,0,0" Grid.RowSpan="2" Click="ParenthesisButton_Click" />
+        <Button Grid.Column="3" Grid.Row="3" Name="Btn15" Content=")" Margin="0,62,0,0" Grid.RowSpan="2" Click="ParenthesisButton_Click" />
+        <Button Grid.Column="4" Grid.Row="3" Name="Btn16" Content="n!" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="5" Grid.Row="3" Name="Btn18" Content="/" Margin="0,62,0,0" Grid.RowSpan="2" Click="OperatorButton_Click" />
+        <Button Grid.Column="0" Grid.Row="4" Name="Btn19" Content="x^y" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="2" Grid.Row="4" Name="Btn20" Content="7" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="3" Grid.Row="4" Name="Btn21" Content="8" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="4" Grid.Row="4" Name="Btn22" Content="9" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="5" Grid.Row="4" Name="Btn23" Content="*" Margin="0,62,0,0" Grid.RowSpan="2" Click="OperatorButton_Click" />
+        <Button Grid.Column="0" Grid.Row="5" Name="Btn25" Content="10^x" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2"  Click="FunctionButton_Click"/>
+        <Button Grid.Column="2" Grid.Row="5" Name="Btn26" Content="4" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="3" Grid.Row="5" Name="Btn27" Content="5" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="4" Grid.Row="5" Name="Btn28" Content="6" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="5" Grid.Row="5" Name="Btn29" Content="-" Margin="0,62,0,0" Grid.RowSpan="2" Click="OperatorButton_Click" />
+        <Button Grid.Column="0" Grid.Row="6" Name="Btn31" Content="log" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="2" Grid.Row="6" Name="Btn32" Content="1" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="3" Grid.Row="6" Name="Btn33" Content="2" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="4" Grid.Row="6" Name="Btn34" Content="3" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="5" Grid.Row="6" Name="Btn36" Content="+" Margin="0,62,0,0" Grid.RowSpan="2" Click="OperatorButton_Click" />
+        <Button Grid.Column="0" Grid.Row="7" Name="Btn37" Content="ln" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2"  Click="FunctionButton_Click"/>
+        <Button Grid.Column="2" Grid.Row="7" Name="Btn38" Content="+/-" Margin="0,62,0,0" Grid.RowSpan="2" Click="FunctionButton_Click" />
+        <Button Grid.Column="3" Grid.Row="7" Name="Btn39" Content="0" Click="DigitButton_Click" Margin="0,62,0,0" Grid.RowSpan="2"  />
+        <Button Grid.Column="4" Grid.Row="7" Name="Btn40" Content="." Margin="0,62,0,0" Grid.RowSpan="2"  Click="DigitButton_Click" />
+        <Button Grid.Column="5" Grid.Row="7" Name="Btn41" Content="=" Margin="0,62,0,0" Grid.RowSpan="2" Click="EqualsButton_Click" />
+
+
+
+    </Grid>
+
+
+</Window>

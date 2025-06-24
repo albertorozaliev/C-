@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="avtoDataSet" targetNamespace="http://tempuri.org/avtoDataSet.xsd" xmlns:mstns="http://tempuri.org/avtoDataSet.xsd" xmlns="http://tempuri.org/avtoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="avtoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="avtoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.avto.Properties.Settings.GlobalReference.Default.avtoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ModelsTableAdapter" GeneratorDataComponentClassName="ModelsTableAdapter" Name="Models" UserDataComponentName="ModelsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="avtoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Models]. ID_model, [Models].[title],[Models].typeModel_ID, [typeModel].title from [Models] 
+inner join [typeModel] on [Models].[ID_model] = [typeModel].ID_typeModel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_model" DataSetColumn="ID_model" />
+              <Mapping SourceColumn="title" DataSetColumn="title" />
+              <Mapping SourceColumn="typeModel_ID" DataSetColumn="typeModel_ID" />
+              <Mapping SourceColumn="title1" DataSetColumn="title1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="avtoConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetDataBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [Models]. ID_model, [Models].[title],[Models].typeModel_ID, [typeModel].title from [Models] 
+inner join [typeModel] on [Models].[ID_model] = [typeModel].ID_typeModel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="typeModelTableAdapter" GeneratorDataComponentClassName="typeModelTableAdapter" Name="typeModel" UserDataComponentName="typeModelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="avtoConnectionString (Settings)" DbObjectName="avto.dbo.typeModel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[typeModel] WHERE (([ID_typeModel] = @Original_ID_typeModel) AND ([title] = @Original_title))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_typeModel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_typeModel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="title" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[typeModel] ([title]) VALUES (@title);
+SELECT ID_typeModel, title FROM typeModel WHERE (ID_typeModel = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="title" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_typeModel, title FROM dbo.typeModel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[typeModel] SET [title] = @title WHERE (([ID_typeModel] = @Original_ID_typeModel) AND ([title] = @Original_title));
+SELECT ID_typeModel, title FROM typeModel WHERE (ID_typeModel = @ID_typeModel)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="title" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID_typeModel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_typeModel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="title" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID_typeModel" ColumnName="ID_typeModel" DataSourceName="avto.dbo.typeModel" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_typeModel" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID_typeModel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_typeModel" DataSetColumn="ID_typeModel" />
+              <Mapping SourceColumn="title" DataSetColumn="title" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="avtoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="avtoDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="avtoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Models" msprop:Generator_RowClassName="ModelsRow" msprop:Generator_RowEvHandlerName="ModelsRowChangeEventHandler" msprop:Generator_RowDeletedName="ModelsRowDeleted" msprop:Generator_RowDeletingName="ModelsRowDeleting" msprop:Generator_RowEvArgName="ModelsRowChangeEvent" msprop:Generator_TablePropName="Models" msprop:Generator_RowChangedName="ModelsRowChanged" msprop:Generator_UserTableName="Models" msprop:Generator_RowChangingName="ModelsRowChanging" msprop:Generator_TableClassName="ModelsDataTable" msprop:Generator_TableVarName="tableModels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_model" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID_model" msprop:Generator_ColumnPropNameInTable="ID_modelColumn" msprop:Generator_ColumnPropNameInRow="ID_model" msprop:Generator_ColumnVarNameInTable="columnID_model" type="xs:int" />
+              <xs:element name="title" msprop:Generator_UserColumnName="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnVarNameInTable="columntitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="typeModel_ID" msprop:Generator_UserColumnName="typeModel_ID" msprop:Generator_ColumnPropNameInTable="typeModel_IDColumn" msprop:Generator_ColumnPropNameInRow="typeModel_ID" msprop:Generator_ColumnVarNameInTable="columntypeModel_ID" type="xs:int" />
+              <xs:element name="title1" msprop:Generator_ColumnPropNameInRow="title1" msprop:Generator_ColumnPropNameInTable="title1Column" msprop:Generator_ColumnVarNameInTable="columntitle1" msprop:Generator_UserColumnName="title1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="typeModel" msprop:Generator_RowClassName="typeModelRow" msprop:Generator_RowEvHandlerName="typeModelRowChangeEventHandler" msprop:Generator_RowDeletedName="typeModelRowDeleted" msprop:Generator_RowDeletingName="typeModelRowDeleting" msprop:Generator_RowEvArgName="typeModelRowChangeEvent" msprop:Generator_TablePropName="typeModel" msprop:Generator_RowChangedName="typeModelRowChanged" msprop:Generator_UserTableName="typeModel" msprop:Generator_RowChangingName="typeModelRowChanging" msprop:Generator_TableClassName="typeModelDataTable" msprop:Generator_TableVarName="tabletypeModel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_typeModel" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID_typeModel" msprop:Generator_ColumnPropNameInTable="ID_typeModelColumn" msprop:Generator_ColumnPropNameInRow="ID_typeModel" msprop:Generator_ColumnVarNameInTable="columnID_typeModel" type="xs:int" />
+              <xs:element name="title" msprop:Generator_UserColumnName="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnVarNameInTable="columntitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Models" />
+      <xs:field xpath="mstns:ID_model" />
+    </xs:unique>
+    <xs:unique name="typeModel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:typeModel" />
+      <xs:field xpath="mstns:ID_typeModel" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__Models__typeMode__4F7CD00D" msdata:parent="typeModel" msdata:child="Models" msdata:parentkey="ID_typeModel" msdata:childkey="typeModel_ID" msprop:Generator_UserParentTable="typeModel" msprop:Generator_UserChildTable="Models" msprop:Generator_RelationVarName="relationFK__Models__typeMode__4F7CD00D" msprop:Generator_ChildPropName="GetModelsRows" msprop:Generator_ParentPropName="typeModelRow" msprop:Generator_UserRelationName="FK__Models__typeMode__4F7CD00D" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

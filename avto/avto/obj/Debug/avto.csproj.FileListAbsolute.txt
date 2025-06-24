@@ -1,0 +1,15 @@
+C:\para\C#\avto\avto\bin\Debug\avto.exe.config
+C:\para\C#\avto\avto\bin\Debug\avto.exe
+C:\para\C#\avto\avto\bin\Debug\avto.pdb
+C:\para\C#\avto\avto\obj\Debug\avto.csproj.AssemblyReference.cache
+C:\para\C#\avto\avto\obj\Debug\MainWindow.g.cs
+C:\para\C#\avto\avto\obj\Debug\App.g.cs
+C:\para\C#\avto\avto\obj\Debug\avto_MarkupCompile.cache
+C:\para\C#\avto\avto\obj\Debug\avto_MarkupCompile.lref
+C:\para\C#\avto\avto\obj\Debug\MainWindow.baml
+C:\para\C#\avto\avto\obj\Debug\avto.g.resources
+C:\para\C#\avto\avto\obj\Debug\avto.Properties.Resources.resources
+C:\para\C#\avto\avto\obj\Debug\avto.csproj.GenerateResource.cache
+C:\para\C#\avto\avto\obj\Debug\avto.csproj.CoreCompileInputs.cache
+C:\para\C#\avto\avto\obj\Debug\avto.exe
+C:\para\C#\avto\avto\obj\Debug\avto.pdb
